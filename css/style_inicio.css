@@ -1,393 +1,264 @@
-@import url('https://fonts.cdnfonts.com/css/pistoleer');
-@import url('https://fonts.cdnfonts.com/css/equali');
-@import url('https://fonts.cdnfonts.com/css/shameimaru-sans');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/minecraft-title');
-@import url('https://fonts.cdnfonts.com/css/konkhmer-sleokchher');
-@import url('https://fonts.cdnfonts.com/css/minecraftia');
-@import url('https://fonts.cdnfonts.com/css/rubik');
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     scrollbar-width: none;
 }
-
-body {
-    height: 100vh;
-    background-color: #1e2124;
-    justify-content: center;
-}
-
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    justify-content: center;
+    max-width: 100%;
+    height: 12vh;
     display: flex;
-    gap: 10px;
-    align-items: center;
-    height: 110px;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
-}
-
-header img {
-    width: 200px;
-    height: auto;
-    margin: 0px 60px;
-    position: absolute;
-    left: 10px;
-}
-
-header a {
-    position: relative;
-    text-decoration: none;
-    font-size: 2rem;
-    font-family: 'Rubik', sans-serif;
-    font-weight: 700;
-    color: #bcbcbc;
-    display: inline-block;
-    transform: translateX(380px);
-    margin-left: 20px;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-header a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: #ffffff;
-    transition: 0.3s;
-}
-
-header a:hover::after {
-    width: 100%;
-}
-
-header a:hover {
-    color: #ffffff;
-}
-
-main {
-    width: 100%;
-    height: auto;
-}
-
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../img/backgrounds/raids_background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.container h1 {
-    color: #e4e4e4;
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.2rem;
-    width: 60%;
-    margin-top: 10px;
-    animation: fade-in 2s forwards;
-    text-shadow: #000000 2px 2px 5px;
-}
-
-.container a {
-    margin-top: 30px;
-    color: #ffffff;
-    font-size: 2rem;
-    text-decoration: none;
-    font-family: Minecraft title, sans-serif;
-    animation: fade-in 2s forwards;
-    text-shadow: #ff0095 2px 2px 1px;
-}
-
-.line {
-    content: "";
-    display: block;
-    width: 200%;
-    margin: 0 auto;
-    border-bottom: 1px solid #2600ff;
-    animation: esticar 2s forwards;
-}
-
-.container p {
-    color: #ffffff;
-    margin-top: 0px;
-    max-width: 40ch;
-    font-size: 1.2rem;
-    font-family: minecraftia, sans-serif;
-    animation: fade-in 2s forwards;
-    text-shadow: #000000 2px 2px 1px;
-}
-
-.container h2 {
-    color: #7289da;
-    display: inline-block;
-    margin-top: 20px;
-    font-size: 2rem;
-    font-family: 'Minecraft Title', sans-serif;
-    animation: fade-in 1s ease forwards, glow 2s ease infinite;
-}
-
-#play {
-    cursor: pointer;
-    background-color: rgb(207, 207, 207);
-    padding: 10px 20px;
-    color: rgb(54, 54, 54);
-    font-family: minecraftia, sans-serif;
-    text-shadow: none;
-    animation: none;
-    font-size: 1.2rem;
-    border-radius: 0px;
-    border: #000000 2px solid;
-}
-
-#play:hover {
-    background-color: green;
-    color: white;
-    border: #ffffff 2px solid;
-
-}
-
-#logo {
-    width: 200px;
-    height: auto;
-    max-width: 60%;
-    margin: 20px 20px;
-    margin-top: 350px;
-    scale: 1.2;
-    cursor: pointer;
-    display: inline-block;
-}
-
-#status {
-    color: #ffffff;
-    font-family: 'Minecraft Title', sans-serif;
-    text-shadow: #000000 2px 2px 0px;
-    font-size: 1.5rem;
-    margin-top: -75px;
-    border-radius: 20px;
-    padding: 10px 30px;
-    display: inline-block;
-}
-
-.redes {
-    position: relative;
-    width: 190px;
-    height: auto;
-    padding: 10px 10px;
-    margin-top: 80px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.267);
     z-index: 10;
-    gap: 10px;
-    display: flex;
 }
 
-.redes::before {
+nav a{
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 20px;
+    display: inline-block; 
+}
+
+nav a::after {
     content: "";
-    position: absolute;
+    display: block; 
+    border-bottom: #ffffff solid 2px;
     width: 100%;
-    height: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+ 
+nav a:hover {
+    color: #f0f0f0;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    padding: 0px 80px;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: auto;
+    height: auto;
+    align-items: center;
+    display: flex;
+    margin: 2px 80px;
+    cursor: pointer;
+}
+
+
+
+
+
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/backgrounds/season4_background.png') no-repeat center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: darken;
+}
+
+#myVideo {
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 20px;
-    opacity: 0.8;
-    border-bottom: #000662 solid 4px;
-    border-right: #000662 solid 4px;
-    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.popup {
+    position: absolute;
+    width: 450px;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px 40px;
+}
+
+.popup h1{
+    font-family: 'Minecraft Title', sans-serif;
+    color: #f0f0f0;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: rgba(150, 35, 0, 0);
+    position: relative;
+    font-family: 'Rubik', sans-serif;
+    border: 2px solid #f0f0f0;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #ffffff;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s;
+}
+
+.buttons button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(255, 153, 0, 0.747);
     z-index: -1;
+    transition: width 0.3s ease-in-out;
 }
 
-.redes img {
-    width: 35px;
-    transition: 0.3s;
+.buttons button:hover::before {
+    width: 100%;
 }
 
-.redes img:hover {
-    transform: scale(1.1);
+.buttons button:hover {
+    border-color: rgb(255, 153, 0, 0.747); 
 }
 
-.mobile {
-    display: none;
+
+
+
+
+.features {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    background-color: #1e2124;
+    border-top: 3px solid #3a3a3a;
+    border-bottom: 3px solid #3a3a3a;
 }
 
-@keyframes floating {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-
+.cards {
+    position: relative;
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box; 
+    padding: 0 20px; 
 }
 
-@keyframes bright {
-    0% {
-        text-shadow: #ff0000 0px 0px 0px;
-    }
 
-    50% {
-        text-shadow: #ff0000 0px 0px 40px;
-    }
-
-
+.card_1, .card_2, .card_3 {
+    width: 350px;
+    max-width: 100%;
+    min-height: 26vh;
+    color: rgb(255, 153, 0, 0.747);
+    font-family: rubik;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
 }
 
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.card_1 h1, .card_2 h1, .card_3 h1{
+    font-size: 1.4rem;
+    padding: 20px 20px;
+    margin-bottom: auto;
 }
 
-@keyframes esticar {
-    from {
-        width: 0px;
-    }
-
-    to {
-        width: 260px;
-    }
+.card_1 p, .card_2 p, .card_3 p{
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 100;
+    padding: 20px 20px;
+    margin-top: auto;
 }
 
-@keyframes glow {
-    0% {
-        text-shadow: #c655ff 0 0 0px;
-    }
-
-    50% {
-        text-shadow: 0 0 6px #c655ff;
-    }
+.card_1 img, .card_2 img, .card_3 img {
+    width: 60px;
+    height: 60px;
+    filter:invert()
 }
+
+.title {
+    padding-top: 15px;
+    display: flex;
+}
+
 
 @media (max-width: 768px) {
-    body {
-        max-width: 100%;
-    }
-
-    header {
-        width: 100%;
-        height: 100px;
-        gap: 0px;
-    }
-
-    header img {
+    nav {
         position: absolute;
-        width: 160px;
-        left: -40px;
-        height: auto;
-    }
-
-    .mobile {
-        display: flex;
-        background: none;
-    }
-
-    #mobile {
-        position: absolute;
-        right: 40px;
-        padding: 10px 10px;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.8rem;
-        z-index: 101;
-    }
-
-    aside {
-        position: fixed;
-        width: 100%;
+        right: -2000px;
         height: 100vh;
-        left: 0%;
-        top: 0%;
+        display: flex;
+        padding: 25px 60px;
+        gap: 20px;
+        flex-direction: column;
+        background-color: #090A0B;
+        transition: 0.3s;
+    }
+
+    nav a {
+        position: relative;
+        margin-right: auto;
+        left: -50%;
+    }
+
+    nav.active {
+        right: 0px;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+    .hamburger span{
+        background-color: white;
+        padding: 1px;
+        height: 2px;
+        width: 30px;
         display: flex;
         flex-direction: column;
-        transform: translateX(100%);
-        background: rgba(31, 27, 39, 0.8);
-        z-index: 100;
-        text-align: center;
-        transition:0.3s ease-in-out;
+        margin: 6px;
     }
 
-    .active {
-        transform: translateX(0%);
-        transition:0.3s ease-in-out;
+    .logo {
+        margin: 2px 5px;
     }
 
-    aside a {
-        font-size: 2rem;
-        font-family: 'Rubik', sans-serif;
-        font-weight: 700;
-        width: 100%;
-        margin-bottom: 20px;
-        color: #ffffff;
-        text-decoration: none;
-        transform: translateY(200px);
+    .popup {
+        left: 50%;
+        width: 400px;
+        max-width: 80%;
     }
 
-    header a {
-        display: none;
+    #myVideo {
+        object-position: center;
     }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        transform: none;
-        flex-direction: column;
-        height: 100vh;
-        width: 100%;
-    }
-
-    .container h1 {
-        font-size: 1rem;
-        width: 80%;
-    }
-
-
-    @keyframes esticar-mobile {
-        from {
-            width: 0px;
-        }
-
-        to {
-            width: 320px;
-        }
-    }
-
-    .container p {
-        font-size: 0.8rem;
-        max-width: 70%;
-    }
-
-    .container h2 {
-        font-size: 1.5rem;
-        max-width: 70%;
-    }
-
-    #status {
-        font-size: 1.2rem;
-        top: 30px;
-    }
-
 }

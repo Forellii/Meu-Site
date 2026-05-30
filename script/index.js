@@ -1,64 +1,6 @@
-const play = document.getElementById('play')
-play.addEventListener('click', () => {
-    window.open('https://discord.gg/wgYH9KQXUK' , '_blank');
-});
+const button = document.getElementsByClassName('hamburger')[0];
+const nav = document.getElementsByTagName('nav')[0];
 
-const yt = document.getElementById('yt')
-yt.addEventListener('click', () => {
-    window.open('https://youtube.com/@forelliii' , '_blank');
-});
-const ttk = document.getElementById('ttk')
-ttk.addEventListener('click', () => {
-    window.open('https://www.tiktok.com/@forellii' , '_blank');
-});
-const dc = document.getElementById('dc')
-dc.addEventListener('click', () => {
-    window.open('https://discord.gg/wgYH9KQXUK' , '_blank');
-});
-const ig = document.getElementById('ig')
-ig.addEventListener('click', () => {
-    window.open('https://www.instagram.com/forelliii/' , '_blank');
-});
-
-//Status do Servidor
-function atualizarStatus() {
-  fetch("https://api.mcstatus.io/v2/status/java/TROCAR")
-    .then(res => res.json())
-    .then(data => {
-      let status = document.getElementById("status");
-      if (data.online) {
-        let players = data.players.online;
-        let max = data.players.max;
-        let version = data.version.name_raw;
-        status.innerHTML = `🟢 - ${players}/${max} `;
-      } else {
-        status.innerHTML = "🔴 - OFF";
-      }
-    })
-    .catch(() => {
-      document.getElementById("status").innerHTML = "🔴 - OFF";
-    });
-}
-
-atualizarStatus();
-
-setInterval(atualizarStatus, 10000);
-
-function copy() {
-  var copyText = document.getElementById("ip-server").value;
-  navigator.clipboard.writeText(copyText).then(() => {
-  });
-}
-
-function scrollpage() {
-    window.scrollTo({
-        top: 10000,
-        behavior: 'smooth'
-    });
-}
-
-const mobile = document.getElementById('mobile')
-const aside = document.getElementById('aside')
-mobile.addEventListener('click', () => {
-    aside.classList.toggle('active')
+button.addEventListener('click', () => {
+  nav.classList.toggle('active');
 });

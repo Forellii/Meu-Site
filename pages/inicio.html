@@ -16,45 +16,72 @@
   <link rel="stylesheet" href="../css/style_inicio.css">
   <link rel="venus icon" href="../img/logos/venus_logo_.png">
   <link rel="icon" type="image/png" href="../img/logos/venus_logo_.png">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Londrina+Solid:wght@100;300;400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
   <header>
-    <img src="../img/logos/textlogo.png" alt="">
-    <a href="working">Discord</a>
-    <a href="working">FAQS</a>
-    <a href="working">Equipe</a>
+    <img class="logo" src="../img/logos/textlogo.png" alt="Venus Craft">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <a href="">INÍCIO</a>
+      <a href="working.html">SOBRE</a>
+      <a href="working.html">LOJA</a>
+      <a href="working.html">AJUDA</a>
+      <a href="working.html">DISCORD</a>
+    </nav>
   </header>
-  <div class="mobile">
-    <button id="mobile">☰</button>
-    <aside id="aside">
-      <a href="working">Discord</a>
-      <a href="working">FAQS</a>
-      <a href="working">Equipe</a>
-    </aside>
-  </div>
   <main>
-    <section class="container">
-      <img id="logo" src="../img/logos/4.png" alt="venus_logo">
-      <div class="line"></div>
-      <h1>A Venus Craft é um servidor SMP focado em trazer diversão e fazer amizades, onde você pode fazer clâs,
-        interagir com a comunidade e partircipar de eventos!</h1>
-      <h2 id="play">Entrar no Discord</h2>
-      <div class="redes">
-        <img id="yt" src="../img/youtube-app-white-icon.png" alt="youtube">
-        <img id="ttk" src="../img/tiktok.png" alt="tiktok">
-        <img id="dc" src="../img/discord-white-icon.png" alt="discord">
-        <img id="ig" src="../img/instagram-white-icon.png" alt="instagram">
+    <section class="home">
+      <video autoplay loop muted playsinline id="myVideo">
+        <source src="../img/0530.mp4" type="video/mp4">
+      </video>
+      <div class="popup">
+        <h1>JOGUE, EXPLORE, LUTE E DESCUBRA NOVAS AVENTURAS NO SERVIDOR!</h1>
+        <div class="buttons">
+          <button class="dc">DISCORD</button>
+          <button class="join">JOGUE</button>
+        </div>
       </div>
-      <h2 style="margin-top: 20px; margin-bottom: 20px; color: wheat; font-family: sans-serif; font-size: 1.3rem;">
-        Forellii - Venus Craft</h2>
     </section>
+
+    <section class="features">
+      <div class="cards">
+        <div class="card_1">
+          <div class="title">
+            <img src="../img/sword.png" alt="">
+            <h1>EXPERIÊNCIA ÚNICA</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+        <div class="card_2">
+          <div class="title">
+            <img src="../img/block.png" alt="">
+            <h1>EXPERIÊNCIA ÚNICA</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+        <div class="card_3">
+          <div class="title">
+            <img src="../img/axes.png" alt="">
+            <h1>EXPERIÊNCIA ÚNICA</h1>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
+
   <script src="../script/index.js"></script>
-  <script src="../script/count.js"></script>
 </body>
 
 </html>
